@@ -56,14 +56,15 @@
             this.N = new System.Windows.Forms.TextBox();
             this.O = new System.Windows.Forms.TextBox();
             this.P = new System.Windows.Forms.TextBox();
-            this.Q = new System.Windows.Forms.TextBox();
             this.R = new System.Windows.Forms.TextBox();
             this.S = new System.Windows.Forms.TextBox();
             this.T = new System.Windows.Forms.TextBox();
             this.U = new System.Windows.Forms.TextBox();
-            this.V = new System.Windows.Forms.TextBox();
             this.buttonClear = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.W = new System.Windows.Forms.TextBox();
+            this.Y = new System.Windows.Forms.TextBox();
+            this.Z = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.flp.SuspendLayout();
             this.SuspendLayout();
@@ -180,12 +181,13 @@
             this.flp.Controls.Add(this.N);
             this.flp.Controls.Add(this.O);
             this.flp.Controls.Add(this.P);
-            this.flp.Controls.Add(this.Q);
             this.flp.Controls.Add(this.R);
             this.flp.Controls.Add(this.S);
             this.flp.Controls.Add(this.T);
             this.flp.Controls.Add(this.U);
-            this.flp.Controls.Add(this.V);
+            this.flp.Controls.Add(this.W);
+            this.flp.Controls.Add(this.Y);
+            this.flp.Controls.Add(this.Z);
             this.flp.Location = new System.Drawing.Point(84, 89);
             this.flp.Name = "flp";
             this.flp.Size = new System.Drawing.Size(597, 59);
@@ -305,47 +307,33 @@
             this.P.Size = new System.Drawing.Size(40, 20);
             this.P.TabIndex = 16;
             // 
-            // Q
-            // 
-            this.Q.Location = new System.Drawing.Point(739, 3);
-            this.Q.Name = "Q";
-            this.Q.Size = new System.Drawing.Size(40, 20);
-            this.Q.TabIndex = 17;
-            // 
             // R
             // 
-            this.R.Location = new System.Drawing.Point(785, 3);
+            this.R.Location = new System.Drawing.Point(739, 3);
             this.R.Name = "R";
             this.R.Size = new System.Drawing.Size(40, 20);
             this.R.TabIndex = 18;
             // 
             // S
             // 
-            this.S.Location = new System.Drawing.Point(831, 3);
+            this.S.Location = new System.Drawing.Point(785, 3);
             this.S.Name = "S";
             this.S.Size = new System.Drawing.Size(40, 20);
             this.S.TabIndex = 19;
             // 
             // T
             // 
-            this.T.Location = new System.Drawing.Point(877, 3);
+            this.T.Location = new System.Drawing.Point(831, 3);
             this.T.Name = "T";
             this.T.Size = new System.Drawing.Size(40, 20);
             this.T.TabIndex = 20;
             // 
             // U
             // 
-            this.U.Location = new System.Drawing.Point(923, 3);
+            this.U.Location = new System.Drawing.Point(877, 3);
             this.U.Name = "U";
             this.U.Size = new System.Drawing.Size(40, 20);
             this.U.TabIndex = 21;
-            // 
-            // V
-            // 
-            this.V.Location = new System.Drawing.Point(969, 3);
-            this.V.Name = "V";
-            this.V.Size = new System.Drawing.Size(40, 20);
-            this.V.TabIndex = 22;
             // 
             // buttonClear
             // 
@@ -367,6 +355,27 @@
             this.checkBox1.Text = "Zawsze na wierzchu";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // W
+            // 
+            this.W.Location = new System.Drawing.Point(923, 3);
+            this.W.Name = "W";
+            this.W.Size = new System.Drawing.Size(40, 20);
+            this.W.TabIndex = 22;
+            // 
+            // Y
+            // 
+            this.Y.Location = new System.Drawing.Point(969, 3);
+            this.Y.Name = "Y";
+            this.Y.Size = new System.Drawing.Size(40, 20);
+            this.Y.TabIndex = 23;
+            // 
+            // Z
+            // 
+            this.Z.Location = new System.Drawing.Point(1015, 3);
+            this.Z.Name = "Z";
+            this.Z.Size = new System.Drawing.Size(40, 20);
+            this.Z.TabIndex = 24;
             // 
             // Form1
             // 
@@ -426,14 +435,15 @@
         private System.Windows.Forms.TextBox N;
         private System.Windows.Forms.TextBox O;
         private System.Windows.Forms.TextBox P;
-        private System.Windows.Forms.TextBox Q;
         private System.Windows.Forms.TextBox R;
         private System.Windows.Forms.TextBox S;
         private System.Windows.Forms.TextBox T;
         private System.Windows.Forms.TextBox U;
-        private System.Windows.Forms.TextBox V;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox W;
+        private System.Windows.Forms.TextBox Y;
+        private System.Windows.Forms.TextBox Z;
     }
 }
 
