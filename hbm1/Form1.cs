@@ -41,19 +41,21 @@ namespace hbm1
             }
         }
 
-        private void utworzSciezke()
+        private bool utworzSciezke()
         {
             if (textBoxAuto.Text != "" && textBoxFolder.Text != "")
             {
                 string sciezka = textBoxFolder.Text + "\\" + textBoxAuto.Text;
                 System.IO.Directory.CreateDirectory(sciezka);
                 buttonJedziemy.BackColor = Color.LightGray;
+                return true;
             }
             else
             {
                 //textBoxFolder.BackColor = Color.Red;
                 //textBoxAuto.BackColor = Color.Red;
                 buttonJedziemy.BackColor = Color.Red;
+                return false;
             }
         }
 
@@ -67,11 +69,24 @@ namespace hbm1
                     string plik = "\\" + tb.Name + " (" + tb.Text + ")." + textBoxRozszerzenie.Text;
                     string org = textBoxFolder.Text + plik;
                     string kopia = textBoxFolder.Text + "\\" + textBoxAuto.Text + plik;
+                    DirectoryInfo[] podfoldery = new DirectoryInfo(textBoxFolder.Text).GetDirectories();
                     if (File.Exists(org))
-                        File.Move(org, kopia);
-                        //File.Copy(org, kopia, true);                
+                        File.Move(org, kopia); //File.Copy(org, kopia, true);                
                     else
+                    {
                         tb.BackColor = Color.OrangeRed;
+                        foreach (var subfolder in podfoldery) //szuka w podfolderach wczesniej przeniesionych filmow
+                        {                            
+                            string subOrg = textBoxFolder.Text + "\\" + subfolder.Name + plik;
+                            if (File.Exists(subOrg))
+                            {
+                                if (subOrg!=kopia)
+                                    File.Copy(subOrg, kopia, true);
+                                tb.BackColor = Color.White;
+                                break;
+                            }                                
+                        }
+                    }                  
                 }
                 else
                     tb.BackColor = Color.LightGray;
@@ -81,11 +96,12 @@ namespace hbm1
         private void button1_Click(object sender, EventArgs e)
         {
             //sprawdza folder i auto i...
-            utworzSciezke();
+            Boolean ops = utworzSciezke();
 
             //sprawdza czy nie puste i liczba w przejezdzie
             //i czy plik istnieje i...
-            przeniesPliki();
+            if (ops)
+                przeniesPliki();
         }
 
         private void Form1_Resize(object sender, EventArgs e)
